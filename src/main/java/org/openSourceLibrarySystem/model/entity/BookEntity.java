@@ -2,17 +2,22 @@ package org.openSourceLibrarySystem.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.*;
-import org.springframework.stereotype.Service;
-
+@Entity
+@Table(name = "book")
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
-@Entity
 public class BookEntity {
     @Id
-    private String bookID;
-    private Double price;
+    private Long id;
+    private String title;
+    private String author;
+    private String publisher;
+    private String isbn;
+    private String category;
+    private int availableCopies;
 }
